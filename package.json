@@ -1,0 +1,22 @@
+{
+  "name": "Edu",
+  "version": "1.0.0",
+  "description": "**Instruction manual**",
+  "main": "Js/App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjhonic/TypeEdu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gjhonic/TypeEdu/issues"
+  },
+  "homepage": "https://github.com/gjhonic/TypeEdu#readme",
+  "dependencies": {
+    "readline-sync": "1.4.10"
+  }
+}
