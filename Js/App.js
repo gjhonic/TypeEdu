@@ -1,8 +1,46 @@
+var Square = /** @class */ (function () {
+    function Square() {
+        this.lenght = undefined;
+        this.width = undefined;
+        this.width = undefined;
+        this.lenght = undefined;
+    }
+    Square.prototype.setLenght = function (a) {
+        if (a < 0) {
+            console.log("Длина должна быть больше 0");
+            return false;
+        }
+        else {
+            this.lenght = a;
+            return true;
+        }
+    };
+    Square.prototype.setWidth = function (b) {
+        if (b < 0) {
+            console.log("Ширина должна быть больше 0");
+            return false;
+        }
+        else {
+            this.width = b;
+            return true;
+        }
+    };
+    Square.prototype.getLenght = function () {
+        return this.lenght;
+    };
+    Square.prototype.getWidth = function () {
+        return this.width;
+    };
+    Square.prototype.getS = function () {
+        return this.width * this.lenght;
+    };
+    return Square;
+}());
 var readline = require('readline-sync');
-var x1 = parseInt(readline.question("X1 = "));
-var x2 = parseInt(readline.question("X2 = "));
-var sum = x1 + x2;
-print(x1.toString() + "+" + x2.toString() + "=" + sum.toString());
-function print(str) {
-    console.log(str);
-}
+var l = parseInt(readline.question("Lenght Square: "));
+var w = parseInt(readline.question("Width Square: "));
+var mySquare = new Square();
+mySquare.setLenght(l);
+mySquare.setWidth(w);
+var S = mySquare.getS();
+console.log("Площадь = " + S.toString());
