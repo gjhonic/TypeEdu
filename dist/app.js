@@ -6,8 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = express_1.default();
 const port = 3000;
+app.set('view engine', 'ejs');
+app.use('/public', express_1.default.static('public'));
 app.get('/', (req, res) => {
-    res.send('The sedulous hyena ate the antelope!');
+    res.render('view/index');
 });
 app.listen(port, err => {
     if (err) {
