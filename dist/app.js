@@ -9,7 +9,7 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use('/public', express_1.default.static('public'));
 app.get('/', (req, res) => {
-    res.render('view/index');
+    res.render('index');
 });
 app.listen(port, err => {
     if (err) {
